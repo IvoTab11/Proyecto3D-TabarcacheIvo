@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject ballPlayer;
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Input.GetAxis("Horizontal")*speed*Time.deltaTime,0,0);

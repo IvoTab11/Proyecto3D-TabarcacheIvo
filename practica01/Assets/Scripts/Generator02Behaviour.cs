@@ -16,14 +16,9 @@ public class Generator02Behaviour : MonoBehaviour
  
     void Start()
     {
-        //if(cantEnemys<=5){
             InvokeRepeating("GenerarEnemigos",initTime,repeatTime);
-            //cantEnemys++;
-        //}
-    
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(transform.position.z>3.93f || transform.position.z<-5f){
