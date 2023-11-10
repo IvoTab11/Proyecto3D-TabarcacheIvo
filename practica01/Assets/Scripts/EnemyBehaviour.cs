@@ -48,6 +48,9 @@ public class EnemyBehaviour : MonoBehaviour
             case 1:
             {
                 transform.Translate(speedX*Time.deltaTime,0,speedZ*Time.deltaTime);
+                if(transform.position.x<-5f && transform.position.z<-5f){
+                    Destroy(this.gameObject);
+                }
                 break;
             }
              case 2:

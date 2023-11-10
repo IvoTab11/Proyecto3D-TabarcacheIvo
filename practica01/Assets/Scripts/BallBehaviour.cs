@@ -11,5 +11,8 @@ public class BallBehaviour : MonoBehaviour
     void Update()
     {
         transform.Translate(0,0,speedZ*Time.deltaTime);
+        if(transform.position.z<-5f || transform.position.z>4.5f){
+            Destroy(this.gameObject);
+        }
     }
 }
