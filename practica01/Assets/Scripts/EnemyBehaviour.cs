@@ -55,7 +55,7 @@ public class EnemyBehaviour : MonoBehaviour
                 if(transform.position.x<-4.44f || transform.position.x>4.44f){
                     speedXEnemy02*=-1;
                 }
-                transform.Translate(speedXEnemy02*Time.deltaTime,0,0);
+                transform.Translate(speedXEnemy02*Time.deltaTime*-1,0,0);
                 break;
             }
         }
