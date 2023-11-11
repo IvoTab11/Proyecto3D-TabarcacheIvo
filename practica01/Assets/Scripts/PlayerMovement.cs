@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private float speed=2f;
+    //Representa las balas del jugador.
     [SerializeField]
     private GameObject ballPlayer;
 

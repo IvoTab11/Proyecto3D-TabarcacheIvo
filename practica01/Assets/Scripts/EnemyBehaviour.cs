@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    //Representa las balas enemigas.
     [SerializeField]
     private GameObject enemyBall;
     [SerializeField]
@@ -12,8 +13,10 @@ public class EnemyBehaviour : MonoBehaviour
     private float speedZ=2f;
     [SerializeField]
     private int enemyType;
+    //Representa la velocidad en el eje X del enemigo 02.
     [SerializeField]
     private float speedXEnemy02=2f;
+    //Representa un tiempo aleatorio.
     private float randomTime=0;
     private void Start(){
         switch(enemyType){
@@ -48,6 +51,7 @@ public class EnemyBehaviour : MonoBehaviour
             case 1:
             {
                 transform.Translate(speedX*Time.deltaTime,0,speedZ*Time.deltaTime);
+                //Se comprueba que el Enemigo01 haya llegado al limite del plano.
                 if(transform.position.x<-5f && transform.position.z<-5f){
                     Destroy(this.gameObject);
                 }
@@ -55,6 +59,7 @@ public class EnemyBehaviour : MonoBehaviour
             }
              case 2:
             {
+                //Se comprueba que el Enemigo02 haya llegado al limite del plano.
                 if(transform.position.x<-4.44f || transform.position.x>4.44f){
                     speedXEnemy02*=-1;
                 }

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Generator01Behaviour : MonoBehaviour
 {
+    //Representa al prefab "Enemigo01".
     [SerializeField]
     private GameObject enemy01;
+    //Representa el tiempo en el que se iniciará el método "GenerarEnemigos".
     [SerializeField]
     private float initTime;
+    //Representa el tiempo en el que se repetirá el método "GenerarEnemigos".
     [SerializeField]
     private float repeatTime;
 
